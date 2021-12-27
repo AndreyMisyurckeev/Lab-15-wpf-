@@ -1,0 +1,130 @@
+﻿<Window x:Class="Lab_15__wpf_.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Lab_15__wpf_"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition />
+            <RowDefinition Height="Auto"/>
+        </Grid.RowDefinitions>
+        <FlowDocumentScrollViewer x:Name="docViewer">
+            <FlowDocument>
+                <Paragraph FontFamily="Harlow Solid Italic" FontSize="20">
+                    Nuitcap
+                </Paragraph>
+                <Paragraph FontFamily="Gabriola" FontSize="14">
+                    By Rebekah Peppler
+                </Paragraph>
+                <Paragraph>
+                    <Floater Width="500" HorizontalAlignment="Right">
+                        <BlockUIContainer>
+                            <Image Source="Data/articleLarge.jpg"></Image>
+                        </BlockUIContainer>
+                    </Floater>
+                </Paragraph>
+                <Paragraph>
+                    A modern and decidedly French-slanted nightcap, the Nuitcap combines Cognac, blanc vermouth and a drinker’s choice of bitter, herbal liqueur: Salers, génépy or Suze. Salers makes for a drier cocktail, while génépy leans sweeter and more herbal. Suze shifts the drink toward the more bitter — and bright yellow — side. A final splash of soda water is kept to a modest 1 ounce, diluting the drink, but not so much that it moves into spritz territory.
+                </Paragraph>
+                <Paragraph>
+                    Featured in:
+                    <Hyperlink NavigateUri="https://www.nytimes.com/2021/12/17/dining/drinks/after-dinner-drink-nightcap.html">After Dinner Drinks You'll Want To Linger Over.</Hyperlink>
+                </Paragraph>
+
+                <Table>
+                    <Table.Columns>
+                        <TableColumn/>
+                        <TableColumn/>
+                    </Table.Columns>
+                    <TableRowGroup>
+                        <TableRow>
+                            <TableCell>
+                                <Paragraph FontFamily="Gungsuh" FontSize="18">
+                                    Ingredients
+                                </Paragraph>
+                            </TableCell>
+                            <TableCell>
+                                <Paragraph FontFamily="Gungsuh" FontSize="18">
+                                    Preparation
+                                </Paragraph>
+                            </TableCell>
+                        </TableRow>
+                    </TableRowGroup>
+                    <TableRowGroup>
+                        <TableRow>
+                            <TableCell>
+                                <List MarkerStyle="Disc">
+                                    <ListItem>
+                                        <Paragraph FontFamily="Gungsuh">
+                                            Ice
+                                        </Paragraph>
+                                    </ListItem>
+                                    <ListItem FontFamily="Gungsuh">
+                                        <Paragraph>
+                                            1 ounce Cognac
+                                        </Paragraph>
+                                    </ListItem>
+                                    <ListItem FontFamily="Gungsuh">
+                                        <Paragraph>
+                                            1 ounce blanc vermouth
+                                        </Paragraph>
+                                    </ListItem>
+                                    <ListItem FontFamily="Gungsuh">
+                                        <Paragraph>
+                                            ½ ounce Salers, génépy or Suze
+                                        </Paragraph>
+                                    </ListItem>
+                                    <ListItem FontFamily="Gungsuh">
+                                        <Paragraph>
+                                            ¼ ounce orange liqueur, such as Pierre Ferrand Dry Curaçao, Cointreau or triple sec
+                                        </Paragraph>
+                                    </ListItem>
+                                    <ListItem FontFamily="Gungsuh">
+                                        <Paragraph>
+                                            1 ounce soda water, to top
+                                        </Paragraph>
+                                    </ListItem>
+                                    <ListItem FontFamily="Gungsuh">
+                                        <Paragraph>
+                                            1 orange wedge or lemon peel, to garnish
+                                        </Paragraph>
+                                    </ListItem>
+                                </List>
+                            </TableCell>
+                            <TableCell>
+                                <List>
+                                    <ListItem>
+                                        <Paragraph>
+                                            Fill a mixing glass with ice, and add the Cognac, vermouth, Salers and orange liqueur.
+                                        </Paragraph>
+                                    </ListItem>
+                                    <ListItem>
+                                        <Paragraph>
+                                            Stir for 30 seconds, then strain into an ice-filled lowball glass.
+                                        </Paragraph>
+                                    </ListItem>
+                                    <ListItem>
+                                        <Paragraph>
+                                            Top with soda water and garnish with the orange wedge or lemon peel.
+                                        </Paragraph>
+                                    </ListItem>
+                                </List>
+                            </TableCell>
+                        </TableRow>
+                    </TableRowGroup>
+                </Table>
+                <BlockUIContainer>
+                    <Button Content="Add to your grocery list" Width="auto" HorizontalAlignment="Left" Background="#FFF3AC4C" FontFamily="Forte" />
+                </BlockUIContainer>
+            </FlowDocument>
+        </FlowDocumentScrollViewer>
+        <StackPanel Grid.Row="1" Orientation="Horizontal">
+            <Button Content="Open" Width="100" Click="Button_Click_2"/>
+            <Button Content="Save" Width="100" Click="Button_Click_1"/>
+            <Button Content="Clear" Width="100" Click="Button_Click"/>
+        </StackPanel>
+    </Grid>
+</Window>
